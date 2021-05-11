@@ -6,4 +6,3 @@ public class Test1 {
         int[] a= new int[3];
     }
 }
-
