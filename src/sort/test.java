@@ -22,7 +22,6 @@ public class test {
 //        SelectSort.selectSort(arr);//选择排序
 //        QuickSort.quickSort(arr);//快速排序
 //        HeapSort.heapSort(arr);//堆排序
-
         MergeSort.mergeSort(arr);//归并排序
         System.out.println("排序后数组："+ Arrays.toString(arr));
     }
