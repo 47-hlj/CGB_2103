@@ -20,7 +20,8 @@ public class test {
 //        InsertSort.insertSort(arr);//插入排序
 //        BubbleSort.bubbleSort(arr);//冒泡排序
 //        SelectSort.selectSort(arr);//选择排序
-        QuickSort.quickSort(arr);//快速排序
+//        QuickSort.quickSort(arr);//快速排序
+        HeapSort.heapSort(arr);
         System.out.println("排序后数组："+ Arrays.toString(arr));
     }
 }
