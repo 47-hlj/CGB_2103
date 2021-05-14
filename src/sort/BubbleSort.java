@@ -12,6 +12,7 @@ package sort;
  *        一轮结束needNextPass为false,即这一轮没有发生交换,说明已经有序,无序再排
  *        详细设计,请见下面的优化代码.
  */
+
 public class BubbleSort {
     public static void bubbleSort(int[] list){
         for(int i=0;i<list.length;i++){
