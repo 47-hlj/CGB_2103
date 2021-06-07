@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="CGB2103">
-  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.20">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.18">
     <root id="1">
       <ServerVersion>10.3.7</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1046,5 +1046,178 @@
     <user id="334" parent="1" name="root">
       <Host>localhost</Host>
     </user>
+    <table id="335" parent="2" name="dept"/>
+    <table id="336" parent="2" name="emp"/>
+    <table id="337" parent="2" name="scores"/>
+    <table id="338" parent="2" name="student"/>
+    <table id="339" parent="2" name="tb_door"/>
+    <table id="340" parent="2" name="tb_order_detail"/>
+    <column id="341" parent="335" name="deptno">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="342" parent="335" name="dname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="335" name="loc">
+      <Position>3</Position>
+      <DataType>varchar(13)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="344" parent="335" name="dname">
+      <ColNames>dname</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="345" parent="335" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>deptno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="346" parent="335" name="dname">
+      <ColNames>dname</ColNames>
+      <UnderlyingIndexName>dname</UnderlyingIndexName>
+    </key>
+    <column id="347" parent="336" name="empno">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="348" parent="336" name="ename">
+      <Position>2</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="349" parent="336" name="job">
+      <Position>3</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="350" parent="336" name="mgr">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="351" parent="336" name="hiredate">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="352" parent="336" name="sal">
+      <Position>6</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="353" parent="336" name="comm">
+      <Position>7</Position>
+      <DataType>decimal(7,2 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="354" parent="336" name="deptno">
+      <Position>8</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="355" parent="336" name="deptno">
+      <ColNames>deptno</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="356" parent="336" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>empno</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="357" parent="336" name="emp_ibfk_1">
+      <ColNames>deptno</ColNames>
+      <RefTableName>dept</RefTableName>
+      <RefColNames>deptno</RefColNames>
+    </foreign-key>
+    <column id="358" parent="337" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="359" parent="337" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="360" parent="337" name="score">
+      <Position>3</Position>
+      <DataType>double|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="361" parent="337" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="362" parent="338" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="363" parent="338" name="name">
+      <Position>2</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="364" parent="338" name="age">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="365" parent="339" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="366" parent="339" name="door_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="367" parent="339" name="tel">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="368" parent="339" name="addr">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="369" parent="340" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="370" parent="340" name="order_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="371" parent="340" name="num">
+      <Position>3</Position>
+      <DataType>int(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="372" parent="340" name="item">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
   </database-model>
 </dataSource>
